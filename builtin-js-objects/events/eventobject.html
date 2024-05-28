@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                width: 400px;
+                height:200px;
+                border:2px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+       
+        <div id="d1" onclick="abc(event)"></div>
+        <h1 id="d3"></h1>
+        <script>
+            function abc(e){
+                document.getElementById("d3").innerHTML=e.offsetX+","+e.offsetY
+            }
+        </script>
+    </body>
+</html>

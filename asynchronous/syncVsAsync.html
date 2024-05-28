@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="d2"></h1>
+        <button onclick="abc()">Stop</button>
+        <button onclick="start()">Start</button>
+        <script>
+           var i = 1;
+           var t1;
+            
+           function abc(){
+            clearInterval(t1)
+           }
+           function start(){
+            t1 = setInterval(function(){
+                document.getElementById("d2").innerHTML=i;
+                
+                i=i+1;
+            },100)
+           }
+        </script>
+    </body>
+</html>

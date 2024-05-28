@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var myinfo = {
+                firstname:"praveen",
+                lastname:"gubbala",
+                age:40,
+                married:true,
+                children:2
+            }
+
+            console.log(myinfo["age"])
+            console.log(myinfo['children'])
+            console.log(myinfo['firstname'])
+
+            var ln = 'lastname';
+            console.log(myinfo[ln])
+            console.log(myinfo["ln"])
+
+            //while//for//for..in
+
+            for(var k in myinfo){
+                console.log("Hello",k,myinfo[k])
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            class Abc{
+                getFullName(){
+                    console.log("Mr. "+this.firstname+" "+this.lastname)
+                }
+            }
+            class Employee extends Abc{
+                firstname;
+                lastname;
+                dob;
+                getAge(){
+                    var ctime = Date.now();
+                    var btime = new Date(this.dob)
+                    var ltime = ctime-btime.getTime();
+                    console.log(ltime/(1000*60*60*24*365))
+                }
+            }
+
+            var ob1 = new Employee()
+            ob1.firstname='praveen';
+            ob1.lastname='gubbala';
+            ob1.dob='04-29-1983';
+            ob1.getAge();
+            console.log(ob1)
+            var ob2 = new Employee();
+            ob2.firstname="fatima";
+            ob2.lastname="shaik";
+            ob2.dob="9-10-2003";
+            ob2.getAge();
+
+            ob1.getFullName();
+        </script>
+    </body>
+</html>

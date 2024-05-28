@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var i = 1;
+            //function declerations//declerative functions
+            function inc(x){
+                x++
+                console.log(x)
+            }
+            inc(i);//call by value
+            console.log(i)
+
+            function change2(ar){
+                ar[1] = "praveen"
+            }
+            var br = [10,20,30];
+            change2(br)//call by reference
+
+            console.log(br)
+        </script>
+    </body>
+</html>

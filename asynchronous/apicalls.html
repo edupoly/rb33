@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <script>
+            // console.log(http)
+            // var http = new XMLHttpRequest();
+            // console.log(http.response)
+            // http.open("GET","https://dog.ceo/api/breeds/list/all",true)
+            // console.log(http.response)
+            // http.send();
+            // console.log(http.response)
+            // http.onloadend=function(){
+            //     console.log(http.response)
+            // }
+
+            axios.get("https://fakestoreapi.com/products").then((res)=>{
+                console.log(res.data)
+            })
+            console.log("Last line")
+        </script>
+    </body>
+</html>
+<!-- 
+    1. XMLHttpRequest
+    2. fetch
+    3. jQuery
+    4. axios
+    5. rxjs
+ -->

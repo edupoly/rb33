@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="dd">
+
+        </ul>
+        <script>
+            var students = ['gauri','lakshmi','priya','nandu'];
+            students.forEach(function(s,i){
+                var nli = document.createElement("li");
+                nli.innerHTML=s;
+                var dbtn = document.createElement("button");
+                dbtn.innerHTML = "Del";
+                nli.appendChild(dbtn)
+                dbtn.onclick=function(){
+                    alert(i)
+                }
+                document.getElementById("dd").appendChild(nli)
+            })
+        </script>
+    </body>
+</html>

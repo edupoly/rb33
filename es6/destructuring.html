@@ -1,0 +1,129 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Destructuring</h1>
+        <script>
+            var myfood={
+                lunch:'biryani',
+                dinner:'roti',
+                breakfast:'idli',
+                tea:4
+            }
+            var mywork={
+                reactjs:3,
+                angular:2,
+                js:1
+            }
+            var dress={
+                shirt:'red',
+                pant:'black'
+            }
+
+            var mydetails={
+                myfood,
+                mywork,
+                dress
+            }
+
+
+            console.log(mydetails)
+
+            // var mydetails={...myfood,...mywork,...dress}
+
+            // var ob1 = {
+            //     firstname:'priyaka',
+            //     lastname:'mohan',
+            //     place:"kerala",
+            //     age:20,
+            //     city,
+            //     pincode
+            // }
+
+            // console.log(ob1)
+
+            // var ob2 = {
+            //     profession:'actress',
+            //     industry:'hollywood',
+            //     husband:"dfdfg"
+            // }
+
+            // var o = {...ob1,...ob2}
+            // console.log(o)
+
+            // Object.freeze(ob1);
+            // ob1.age = 33;
+            // console.log(ob1)
+            // ob1={...ob1,age:33}
+            // console.log(ob1)
+
+
+
+            // var ar = [10,2,49,73];
+            // Object.freeze(ar)
+            // ar = [...ar,'praveen']
+            // console.log(ar)
+
+
+
+            // var ar = [12,30,58,37,59];
+
+            // var a = 200;
+
+            // ar = [...ar,a]
+
+            // console.log(ar)
+
+
+
+            // console.log(ar)
+            // console.log(...ar)
+
+            // var br = ar
+            // var cr = [...ar]
+            // ar[3]='kdkd'
+            // console.log(br)
+            // console.log(cr)
+            // console.log(ar)
+
+            //object destructuring
+            // var ob1 = {
+            //     firstname:'priyaka',
+            //     lastname:'mohan',
+            //     place:"kerala",
+            //     age:20,
+            //     address:{
+            //         pincode:'23434',
+            //         district:'trissur',
+            //         area:'mahnid'
+            //     }
+            // }
+            // var {firstname:fn,...x} = ob1;
+            // ob1.firstname='nayantara'
+            // ob1.age=22;
+            // console.log(x)
+            // console.log(fn)
+            // var {firstname,age,lastname,place,address:{pincode}} = ob1;
+
+            // console.log(ob1.firstname)
+            // console.log(firstname)
+            // console.log(age)
+            // console.log(place)
+            // console.log(pincode)
+            // console.log(ob1.address.pincode)
+
+        //array destructuring
+        // var ar = [10,20,30];
+        // var x=ar;
+        // ar[2]='sdfsd'
+        // console.log(x)
+
+
+            //variable destructring
+        //    var a = 100;
+        //    var b = 200;
+        //    [a,b] = [b,a]
+        //    console.log(a)
+        //    console.log(b)
+        </script>
+    </body>
+</html>

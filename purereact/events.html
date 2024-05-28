@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="students.js"></script>
+    </head>
+    <body>
+
+        <div id="root"></div>
+        <script type="text/babel">
+            var maleImage = "https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg";
+            var femaleImage = "https://img.freepik.com/free-vector/beauty-woman-with-green-blouse-character_24877-83554.jpg";
+            var othersImage = "https://img.freepik.com/free-vector/strong-blond-woman-profile-vector_53876-61416.jpg"
+            function abc(e){
+                if(e.target.value==='male'){
+                    document.getElementById("gender").src=maleImage;
+                }
+                if(e.target.value==='female'){
+                    document.getElementById("gender").src=femaleImage;
+                }
+                if(e.target.value==='others'){
+                    document.getElementById("gender").src=othersImage;
+                }
+            }
+            var mydiv = <div style={{width:'300px',height:'200px',border:'2px solid'}}>
+                            <input type="radio" name='gen' value='male' onChange={(e)=>{abc(e)}}/>:Male
+                            <input type="radio" name='gen' value='female' onChange={(e)=>{abc(e)}}/>:Female
+                            <input type="radio" name='gen' value='others' onChange={(e)=>{abc(e)}}/>:Others
+                            <br />
+                            <img id='gender' src="" style={{width:'100%'}}></img>
+                        </div>
+
+            ReactDOM.render(mydiv,document.getElementById("root"))
+
+        </script>
+    </body>
+</html>

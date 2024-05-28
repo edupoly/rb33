@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body>
+        <input type="radio" name="gender" value="male">:Male
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="gender" value="female">:Female
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="gender" value="oth">:Others
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <br>
+        <input type="checkbox" name="techs" value="html">:HTML &nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="techs" value="css">:CSS &nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="techs" value="bootstrap">:BS &nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="techs" value="javascript">:JS &nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="techs" value="reactjs">RJS &nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="techs" value="angular">ANG &nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="techs" value="nodejs">NJS &nbsp;&nbsp;&nbsp;
+        <br>
+        <button onclick="abc()">Lets see</button>
+        <script>
+            function abc(){
+                var x = document.getElementsByName("techs");
+                x.forEach(function(el){
+                    if(el.checked===true){
+                        console.log(el.value)
+                    }
+                })
+            }
+        </script>
+    </body>
+</html>

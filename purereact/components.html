@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="students.js"></script>
+    </head>
+    <body>
+
+        <div id="root"></div>
+        <script type="text/babel">
+            var Abc = function(){return <h1>Hello Edupoly</h1>}
+            var Pqr = function(){return <h4>Here</h4>}
+            var xyz = <i>Code your career <Pqr></Pqr><Abc></Abc> </i>
+            ReactDOM.render(xyz,document.getElementById("root"))
+        </script>
+    </body>
+</html>

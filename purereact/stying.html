@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="students.js"></script>
+    </head>
+    <body>
+
+        <div id="root"></div>
+        <script type="text/babel">
+            var myfavcolo = 'crimson'
+            var maleImg = 'https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg';
+            var femaleImg = "https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png"
+            var mylist = <div style={{display:"flex",flexWrap:'wrap'}}>
+                            {
+                                students.map((s)=>{
+                                    return  <ul style={s['gender']==='male'?{backgroundColor:'lightblue',width:"200px"}:{backgroundColor:'lightpink',width:"200px"}}>
+                                                <li style={{color:myfavcolo}}>{s.firstname}</li>
+                                                <li>{s.lastname}</li>
+                                                <li>{s.age}</li>
+                                                <li>{s.gender}</li>
+                                                <li>
+                                                    {s.gender==='male'&&<img style={{width:"100%"}} src={maleImg} alt=""/>}
+                                                    {s.gender==='female'&&<img style={{width:"100%"}} src={femaleImg} alt=""/>}
+                                                </li>
+                                            </ul>
+                                })
+                            }
+                        </div>
+
+            ReactDOM.render(mylist,document.getElementById("root"))
+
+            // var mydetails = {
+            //     firstname:'gauri',
+            //     lastname:'shinde',
+            //     age:30
+            // }
+            // var x = Object.keys(mydetails);
+            // console.log(x)
+            // var ABCD =  <h2>
+            //                 {
+            //                     x.map((k)=>{
+            //                         return <h2>{k}:{mydetails[k]}</h2>
+            //                     })
+            //                 }
+            //             </h2>
+            // var students = ['samantha','anushka','kazal','krithi','namatha'];
+            // var studentsUI = <ul style={{display:'flex'}}>
+            //                     {
+            //                         students.map((s)=>{
+            //                             return <li style={{width:'200px'}}>{s}</li>
+            //                         })
+            //                     }
+            //                 </ul>
+            // ReactDOM.render(ABCD,document.getElementById('root'))
+        </script>
+    </body>
+</html>

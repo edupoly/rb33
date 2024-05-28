@@ -1,0 +1,44 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="d1">
+        <button onclick="show()">Add Student</button>
+        <br>
+        <button onclick="sortourstudents()">Sort the students</button>
+        <ul id="d3">
+            
+        </ul>
+        <script>
+            var students = ['kinnera',"anu",'sowmya','lilly','radhika']
+            function genListOfStudents(){
+                document.getElementById('d3').innerHTML='';
+                students.forEach(function(s,i){
+                    var nli = document.createElement("li");
+                    nli.innerHTML=s;
+                    var delBtn = document.createElement("button");
+                    delBtn.onclick=function(){
+                        students.splice(i,1)
+                        console.log(students)
+                        genListOfStudents()
+                    }
+                    delBtn.innerHTML='DEL';
+                    nli.appendChild(delBtn)
+                    document.getElementById("d3").appendChild(nli)
+                })
+            }
+            function show(){
+                var val = document.getElementById("d1").value;
+                students.push(val)
+                genListOfStudents();
+                console.log(students)
+            }
+            genListOfStudents();
+            function sortourstudents(){
+                students.sort();
+                console.log(students)
+                genListOfStudents()
+            }
+
+        </script>
+    </body>
+</html>

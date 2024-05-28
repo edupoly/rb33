@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="products.js"></script>
+    </head>
+    <body>
+        <h1>This is HTML element</h1>
+        <div id="jsdiv"></div>
+        <div id="rdiv"></div>
+        <div id="root"></div>
+        <script type="text/babel">
+            var jh1 = document.createElement("h1");
+            jh1.innerHTML="This is Javascript DOM element";
+            jh1.style.color='red'
+            document.getElementById("jsdiv").appendChild(jh1);
+
+            var rh1 = React.createElement("h1",{style:{color:'blue'}},"This is React Element")
+            ReactDOM.render(rh1,document.getElementById("rdiv"))
+
+            var students = ['srileela','prinyaka','alia','deepika','krithi']
+
+            var jsxh1 = <h1 style={{color:'orange'}}>
+                            This is Also react element using JSX
+                            {
+                                students.map((s)=>{
+                                    return <li>{s}</li>
+                                })
+                            }
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Price</th>
+                                        <th>Image</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        products.map((p)=>{
+                                            return  <tr>
+                                                        <td>{p.title}</td>
+                                                        <td>{p.price}</td>
+                                                        <td><img src={p.image} width="100px" alt=""/></td>
+                                                    </tr>
+                                        })
+                                    }
+                                </tbody>
+                            </table>
+                            
+                        </h1>
+            ReactDOM.render(jsxh1,document.getElementById("root"))
+
+
+            console.dir(jh1)
+            console.dir(rh1)
+            console.dir(jsxh1)
+        </script>
+    </body>
+</html>

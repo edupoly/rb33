@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            .errorMsg{
+                display: none;
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <form onsubmit="checkinput(event)" name="userform">
+            <input type="text" placeholder="Enter your name" name="username">
+            <div class="errorMsg">First Name not valid</div>
+            <br>
+            <input type="password" placeholder="Enter your Password" name="password">
+            <div class="errorMsg">Password not valid</div>
+            <br>
+            <button>Login</button>
+        </form>
+
+        <script>
+            function checkinput(e){
+                e.preventDefault();
+                var data = new FormData(e.target)
+                for(var v of data.values()){
+                    console.log(v)
+                }
+                // var x = document.getElementsByName("username");
+                // var x = document.userform.username;
+                // console.log(x.value)
+            }
+            function checkpassword(e){
+                var re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+                if(!re.test(e.target.value)){
+                    e.target.nextElementSibling.style.display="block"
+                }
+                else{
+                    e.target.nextElementSibling.style.display="none"
+                }
+            }
+            function checkusername(e){
+                var nameRegex = /^[a-zA-Z\-]+$/;
+                var res = nameRegex.test(e.target.value)
+                if(res==false){
+                    e.target.nextElementSibling.style.display="block"
+                }
+                else{
+                    e.target.nextElementSibling.style.display="none"
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var product = [
+            {
+                name:"upma",
+                price:30,
+                quantity:3
+            },
+            {
+                name:"dosa",
+                price:50,
+                quantity:5
+            },
+            {
+                name:'single puri',
+                price:30,
+                quantity:8
+            }
+
+        ]
+        var tot=0;
+        for(var i=0;i<=product.length-1;i++){
+            tot=tot+product[i]['price']*product[i]['quantity'];
+        }
+        console.log(tot)
+    </script>
+</body>
+
+</html>

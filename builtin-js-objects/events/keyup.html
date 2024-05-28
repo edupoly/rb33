@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" onkeyup="abc(event)" id="dd">
+        <h1 id="d1"></h1>
+        <script>
+            var a='';
+            
+            document.getElementById("dd").onfocus=function(e){
+                    e.target.style.border="0px solid";
+                    e.target.style.borderBottom="2px solid green";
+                    e.target.style.outline="0px";
+            }
+            document.getElementById("dd").onblur=function(e){
+                    e.target.style.border="2px solid";
+                    e.target.style.outline="2px";
+            }
+        </script>
+    </body>
+</html>

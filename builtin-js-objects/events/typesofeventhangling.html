@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="abc()">Normal way of handling inline binding</button>
+        <br>
+        <button id="d1">addEventListener way of handling</button>
+        <br>
+        <button id="d2">Normal way of handling</button>
+        <script>
+            function abc(){
+                alert("this is event handling....")
+            }
+            document.getElementById("d1").addEventListener("click",abc)
+
+            document.getElementById("d2").onclick=abc;
+        </script>
+    </body>
+</html>

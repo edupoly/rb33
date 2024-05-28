@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="students.js"></script>
+        <style>
+            img{
+                width:400px;
+                object-position: center;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="root"></div>
+        <script type="text/babel">
+            function Gallery(){
+                var [index,setIndex]=React.useState(0)
+                var burgerimages = [
+                "https://images.unsplash.com/photo-1552526881-721ce8509abb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnVyZ2VyJTIwaW1hZ2VzfGVufDB8fDB8fHww",
+                "https://images.unsplash.com/photo-1666243279025-b6958610bd6a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJ1cmdlciUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D",
+                "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnVyZ2VyJTIwaW1hZ2VzfGVufDB8fDB8fHww",
+                "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnVyZ2VyfGVufDB8fDB8fHww"
+             ]
+                function prev(){
+                    setIndex(index-1)
+                }
+                function next(){
+                    if(index===burgerimages.length-1){
+                        setIndex(0)
+                        return
+                    }
+                    setIndex(index+1)
+                }
+             return (
+                <div>
+                    <h1>{index}</h1>
+                    <img src={burgerimages[index]} alt=""/>
+                    <br/>
+                    <button onClick={()=>{prev()}}>Prev</button>
+                    <button onClick={()=>{next()}}>Next</button>
+                </div>
+             )
+            }
+            ReactDOM.render(<Gallery></Gallery>,document.getElementById("root"))
+        </script>
+    </body>
+</html>
